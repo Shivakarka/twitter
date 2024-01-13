@@ -1,10 +1,14 @@
-import "./sidebar.css"
+import { SearchIcon } from "../../utils/svgs";
+import "./sidebar.css";
 const Sidebar = () => {
-    return (
-        <div className={"sidebar"}>
-            <h1>Sidebar</h1>
-        </div>
-    );
+  return (
+    <div className={"sidebar"}>
+      <div className="search">
+        <SearchIcon />
+        <input type="text" placeholder="Search Twitter" />
+      </div>
+    </div>
+  );
 };
 
 export default Sidebar;
