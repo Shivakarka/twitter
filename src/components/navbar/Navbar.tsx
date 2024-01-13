@@ -1,5 +1,5 @@
 import "./navbar.css";
-import NavbarTopItems from "./NavBarTopItems";
+import NavbarTopItems from "./NavbarTopItems";
 import NavbarBottomItems from "./NavbarBottomItems";
 
 const Navbar = () => {
