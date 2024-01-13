@@ -54,8 +54,8 @@
 }
 
 .bottom-nav {
-  width: 230px;
-  padding: 10px 20px;
+  width: 300px;
+  padding: 10px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
