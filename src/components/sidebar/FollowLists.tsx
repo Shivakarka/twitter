@@ -13,7 +13,9 @@ const FollowLists = () => {
         {usersToFollowList?.map((_, index) => (
           <li key={index} className="profile-list">
             <UserProfile location="sidebar" index={index} />
-            <button>Follow</button>
+            <button>
+              <p>Follow</p>
+            </button>
           </li>
         ))}
       </ul>
