@@ -1,5 +1,11 @@
+import "./followedTimelineFeeds.css";
+
 const FollowedTimelineFeeds = () => {
-  return <div>FollowedTimelineFeeds</div>;
+  return (
+    <div className="followedTimeline">
+      <h3> Follow Accounts to Customize Your Timeline</h3>
+    </div>
+  );
 };
 
 export default FollowedTimelineFeeds;
