@@ -110,3 +110,12 @@ export interface VideoData {
   aspX?: number;
   aspY?: number;
 }
+
+export interface IUserData {
+  imageData?: {
+    url: string;
+    alt: string;
+  };
+  userName: string;
+  userId: string;
+}
