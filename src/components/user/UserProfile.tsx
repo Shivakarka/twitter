@@ -4,25 +4,52 @@ import "./UserProfile.css";
 
 interface UserProfileProps {
   location: string;
+  index?: number;
 }
 
-const UserProfile = ({ location }: UserProfileProps) => {
+const UserProfile = ({ location, index }: UserProfileProps) => {
   const data = usePageContext();
+
+  const isNavbar = location === "navbar";
+
   return (
     <>
       <span className="user-info">
-        <div className="user-info-items">
+        <div
+          className={`user-info-items ${!isNavbar ? "sidebar-profile" : ""}`}
+        >
           <img
             className="login"
-            src={data?.loggedInUser?.imageData?.url}
-            alt="profile"
+            src={
+              isNavbar
+                ? data?.loggedInUser?.imageData?.url
+                : data?.followData?.usersToFollow?.[Number(index)]?.imageData
+                    ?.url
+            }
+            alt={
+              isNavbar
+                ? data?.loggedInUser?.imageData?.alt
+                : data?.followData?.usersToFollow?.[Number(index)]?.imageData
+                    ?.alt
+            }
           />
           <div className="user-name">
-            <p id="name">{data?.loggedInUser?.userName}</p>
-            <p id="id">@{data?.loggedInUser?.userId}</p>
+            <p id="name">
+              {isNavbar
+                ? data?.loggedInUser?.userName
+                : data?.followData?.usersToFollow?.[Number(index)].userName}
+            </p>
+            <p id="id">
+              @
+              {isNavbar
+                ? data?.loggedInUser?.userId
+                : data?.followData?.usersToFollow?.[Number(index)].userId}
+            </p>
           </div>
         </div>
-        {location === "navbar" ? <LockedIcon /> : <VerifiedIcon />}
+        <span className={`${!isNavbar ? "verified-icon" : ""}`}>
+          {location === "navbar" ? <LockedIcon /> : <VerifiedIcon />}
+        </span>
       </span>
     </>
   );
