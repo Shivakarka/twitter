@@ -1,5 +1,11 @@
+import AddTweet from "./AddTweet";
+
 const TrendingFeeds = () => {
-  return <div>TrendingFeeds</div>;
+  return (
+    <div>
+      <AddTweet />
+    </div>
+  );
 };
 
 export default TrendingFeeds;
