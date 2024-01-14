@@ -33,6 +33,10 @@
   color: #6e767d;
 }
 
+.trending:nth-child(4) span {
+  text-transform: uppercase;
+}
+
 .showMore {
   font-size: 15px;
   font-style: normal;
