@@ -1,6 +1,5 @@
 .sidebar {
   width: 360px;
-  background: antiquewhite;
   color: #d9d9d9;
   margin-left: 30px;
 }
@@ -35,4 +34,10 @@
 .search input:focus {
   outline: none;
   color: #cbd0d9;
+}
+
+@media only screen and (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
 }
