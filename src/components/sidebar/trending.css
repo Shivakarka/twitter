@@ -1,0 +1,52 @@
+.trending-container {
+  width: 350px;
+  height: 426px;
+  border-radius: 15px;
+  background: #3a3d45;
+  margin: 12px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.trending-container h2 {
+  font-size: 19px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 12px 16px;
+  max-height: 48px;
+}
+
+.trending {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  max-height: 82px;
+}
+
+.trending p {
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #6e767d;
+}
+
+.showMore {
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #1d9bf0;
+  padding: 16px;
+  cursor: pointer;
+}
+
+span a {
+  color: #d9d9d9;
+}
+
+.hashtags a {
+  color: #1d9bf0;
+}

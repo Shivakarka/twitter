@@ -1,4 +1,5 @@
 import { SearchIcon } from "../../utils/svgs";
+import Trending from "./Trending";
 import "./sidebar.css";
 const Sidebar = () => {
   return (
@@ -7,6 +8,7 @@ const Sidebar = () => {
         <SearchIcon />
         <input type="text" placeholder="Search Twitter" />
       </div>
+      <Trending />
     </div>
   );
 };
