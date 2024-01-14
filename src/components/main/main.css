@@ -1,5 +1,57 @@
 .main {
   width: 600px;
-  background: #213547;
   color: #f9f9f9;
+  border-left: 1px solid #2f3336;
+  border-right: 1px solid #2f3336;
+}
+
+.pageTitle {
+  width: 599px;
+  height: 96px;
+  border-bottom: 1px solid #2f3336;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pageTitleTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 20px;
+}
+
+.pageTitleTop h2 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.pageTitleTop svg {
+  width: 18.752px;
+  height: 17.833px;
+  padding: 7px;
+  box-sizing: content-box;
+  cursor: pointer;
+}
+
+.pageTitleBottom {
+  display: flex;
+  justify-content: space-around;
+}
+
+.pageSection {
+  width: max-content;
+}
+
+.pageSection p {
+  margin-bottom: 8px;
+}
+
+.blueBottom {
+  height: 4px;
+  background: #1d9bf0;
 }
