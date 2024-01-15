@@ -42,6 +42,10 @@
   margin-left: 20px;
 }
 
+.tweet-icons > *:hover {
+  scale: 1.1;
+}
+
 .tweet-icons > * {
   display: flex;
   align-items: flex-end;
@@ -84,4 +88,8 @@
 .reply span {
   color: #4c9eeb;
   cursor: pointer;
+}
+
+#heart-icon {
+  width: 14.802px;
 }

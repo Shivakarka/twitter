@@ -80,7 +80,7 @@ export interface TweetData {
   reTweets: number;
   likes: number;
   views: number;
-  id?: string;
+  id: string;
 }
 
 export interface TypographyData {

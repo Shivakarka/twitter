@@ -1,10 +1,12 @@
+import { useState } from "react";
 import { usePageContext } from "../../contexts/PageContext";
 import { formatTweetCount } from "../../utils/Helper";
 import {
   CommentIcon,
-  LikeIcon,
+  LikedIcon,
   RetweetIcon,
   ShareIcon,
+  UnlikedIcon,
   VerifiedIcon,
 } from "../../utils/svgs";
 import AddTweet from "./AddTweet";
@@ -13,6 +15,20 @@ import "./trendingFeeds.css";
 const TrendingFeeds = () => {
   const data = usePageContext();
   const { tweetThreads } = data;
+
+  const [likedTweets, setLikedTweets] = useState<string[]>([]);
+
+  const handleLikeClick = (tweetId: string) => {
+    if (likedTweets.includes(tweetId)) {
+      // Unlike
+      setLikedTweets((prevLikedTweets) =>
+        prevLikedTweets.filter((id) => id !== tweetId)
+      );
+    } else {
+      // Like
+      setLikedTweets((prevLikedTweets) => [...prevLikedTweets, tweetId]);
+    }
+  };
 
   return (
     <div>
@@ -56,8 +72,12 @@ const TrendingFeeds = () => {
                       {<RetweetIcon />}
                       {formatTweetCount(tweet?.reTweets) || 0}
                     </span>
-                    <span>
-                      {<LikeIcon />}
+                    <span onClick={() => handleLikeClick(tweet?.id)}>
+                      {likedTweets.includes(tweet?.id) ? (
+                        <LikedIcon />
+                      ) : (
+                        <UnlikedIcon />
+                      )}
                       {formatTweetCount(tweet?.likes) || 0}
                     </span>
                     <span>
