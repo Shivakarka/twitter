@@ -1,0 +1,72 @@
+.threads {
+  border-bottom: 1px solid #2f3336;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 245px;
+  padding: 16px 20px;
+}
+
+.tweets {
+  display: flex;
+  min-height: 78.802px;
+}
+
+.tweets img {
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+}
+
+.tweet-userinfo p {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.tweet-userinfo p span:nth-child(3) {
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  align-self: center;
+}
+
+.tweet-icons {
+  display: flex;
+  height: 14.802px;
+  margin: 24px auto;
+  align-items: center;
+  gap: 35px;
+  margin-left: 20px;
+}
+
+.tweet-icons > * {
+  display: flex;
+  align-items: flex-end;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+  color: #72767a;
+}
+
+.tweet-icons > * svg {
+  margin-right: 2px;
+}
+
+.userId,
+.tweet-date {
+  color: #687684;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+
+#dot {
+  background-color: #687684;
+}

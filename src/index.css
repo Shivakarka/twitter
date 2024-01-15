@@ -37,6 +37,7 @@ body {
   background: #000;
   font-family: "SF Pro Text", "SF Pro Icons", "Segoe UI", "Helvetica Neue",
     "Helvetica", "Arial", sans-serif;
+  overflow-x: hidden;
 }
 
 h1 {
