@@ -20,7 +20,7 @@ const TrendingFeeds = () => {
       <div>
         {tweetThreads?.map((thread, threadIndex) => (
           <div key={threadIndex} className="threads">
-            {thread?.map((tweet) => (
+            {thread?.map((tweet, tweetIndex) => (
               <div key={tweet?.id} className="tweets">
                 <img
                   src={tweet?.user?.imageData?.url}
@@ -39,6 +39,13 @@ const TrendingFeeds = () => {
                     <span id="dot"></span>
                     <span className="tweet-date">Jan 20</span>
                   </p>
+                  <div className="reply">
+                    {tweetIndex % 2 !== 0 ? (
+                      <p>
+                        Replying to<span>@{tweet?.user?.userId}</span>
+                      </p>
+                    ) : null}
+                  </div>
                   <p>{tweet?.textArea}</p>
                   <div className="tweet-icons">
                     <span>

@@ -51,6 +51,7 @@
   line-height: normal;
   letter-spacing: -0.3px;
   color: #72767a;
+  cursor: pointer;
 }
 
 .tweet-icons > * svg {
@@ -69,4 +70,18 @@
 
 #dot {
   background-color: #687684;
+}
+
+.reply {
+  color: #687684;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.3px;
+}
+
+.reply span {
+  color: #4c9eeb;
+  cursor: pointer;
 }
