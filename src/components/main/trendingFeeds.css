@@ -93,3 +93,15 @@
 #heart-icon {
   width: 14.802px;
 }
+
+@media screen and (max-width: 1000px) {
+  .threads {
+    max-height: 300px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .threads {
+    max-height: 350px;
+  }
+}

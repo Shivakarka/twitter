@@ -62,3 +62,9 @@ form button p {
   padding: 5px 16px 9px;
   box-sizing: content-box;
 }
+
+@media screen and (max-width: 600px) {
+  form button {
+    margin-right: 5vw;
+  }
+}
