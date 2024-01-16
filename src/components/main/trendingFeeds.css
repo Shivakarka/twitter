@@ -5,11 +5,13 @@
   gap: 10px;
   max-height: 245px;
   padding: 16px 20px;
+  position: relative;
 }
 
 .tweets {
   display: flex;
   min-height: 78.802px;
+  z-index: 100;
 }
 
 .tweets img {
@@ -92,6 +94,15 @@
 
 #heart-icon {
   width: 14.802px;
+}
+
+.line {
+  position: absolute;
+  left: 42px;
+  top: 30px;
+  width: 1px;
+  height: 104px;
+  background-color: #3a3d45;
 }
 
 @media screen and (max-width: 1000px) {

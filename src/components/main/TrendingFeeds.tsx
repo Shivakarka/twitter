@@ -36,6 +36,7 @@ const TrendingFeeds = () => {
       <div>
         {tweetThreads?.map((thread, threadIndex) => (
           <div key={threadIndex} className="threads">
+            <div className="line"></div>
             {thread?.map((tweet, tweetIndex) => (
               <div key={tweet?.id} className="tweets">
                 <img
