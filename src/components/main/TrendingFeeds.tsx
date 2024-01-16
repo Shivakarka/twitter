@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { usePageContext } from "../../contexts/PageContext";
 import { formatTweetCount } from "../../utils/Helper";
 import {
@@ -11,12 +11,22 @@ import {
 } from "../../utils/svgs";
 import AddTweet from "./AddTweet";
 import "./trendingFeeds.css";
+import { TweetData } from "../../types/api";
 
 const TrendingFeeds = () => {
   const data = usePageContext();
   const { tweetThreads } = data;
 
+  useEffect(() => {
+    setTweetThreadsState(tweetThreads);
+  }, [tweetThreads]);
+
   const [likedTweets, setLikedTweets] = useState<string[]>([]);
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const [tweetThreadsState, setTweetThreadsState] =
+    useState<TweetData[][]>(tweetThreads);
+
+  console.log(tweetThreadsState);
 
   const handleLikeClick = (tweetId: string) => {
     if (likedTweets.includes(tweetId)) {
@@ -32,11 +42,11 @@ const TrendingFeeds = () => {
 
   return (
     <div>
-      <AddTweet />
+      <AddTweet setTweetThreadsState={setTweetThreadsState} />
       <div>
-        {tweetThreads?.map((thread, threadIndex) => (
+        {tweetThreadsState?.map((thread, threadIndex) => (
           <div key={threadIndex} className="threads">
-            <div className="line"></div>
+            {thread.length > 1 ? <div className="line"></div> : null}
             {thread?.map((tweet, tweetIndex) => (
               <div key={tweet?.id} className="tweets">
                 <img

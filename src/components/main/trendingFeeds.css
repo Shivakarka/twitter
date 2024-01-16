@@ -38,14 +38,12 @@
 .tweet-icons {
   display: flex;
   height: 14.802px;
-  margin: 24px auto;
+  margin: 24px auto 5px;
   align-items: center;
   gap: 35px;
   margin-left: 20px;
-}
-
-.tweet-icons > *:hover {
-  scale: 1.1;
+  justify-content: space-between;
+  max-width: 280px;
 }
 
 .tweet-icons > * {
