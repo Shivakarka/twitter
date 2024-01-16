@@ -89,7 +89,9 @@ const TrendingFeeds = () => {
                       ) : (
                         <UnlikedIcon />
                       )}
-                      {formatTweetCount(tweet?.likes) || 0}
+                      {likedTweets.includes(tweet?.id)
+                        ? formatTweetCount(tweet?.likes + 1)
+                        : formatTweetCount(tweet?.likes)}
                     </span>
                     <span>
                       {<ShareIcon />}
