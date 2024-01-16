@@ -7,6 +7,11 @@ const NavbarTopItems = () => {
       {data.sideNavigationButtons?.map((button, index) => (
         <div className="nav-row" key={index}>
           <img src={button?.icon?.url} alt="logo" />
+          {button?.buttonText === "Notifications" && (
+            <div className="notification">
+              <p>1</p>
+            </div>
+          )}
           <p>{button?.buttonText}</p>
         </div>
       ))}
