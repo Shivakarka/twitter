@@ -34,4 +34,26 @@ const getUserData = (
   }
 };
 
-export { formatTweetCount, getUserData };
+const convertTimestampToString = (timestamp: number | undefined): string => {
+  if (timestamp === undefined) return "";
+  const date = new Date(timestamp);
+  const months: string[] = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const month: string = months[date.getMonth()];
+  const day: string = date.getDate().toString().padStart(2, "0");
+  return `${month} ${day}`;
+};
+
+export { formatTweetCount, getUserData, convertTimestampToString };

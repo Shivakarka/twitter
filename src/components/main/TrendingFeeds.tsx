@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { usePageContext } from "../../contexts/PageContext";
-import { formatTweetCount } from "../../utils/Helper";
+import { convertTimestampToString, formatTweetCount } from "../../utils/Helper";
 import {
   CommentIcon,
   LikedIcon,
@@ -22,11 +22,9 @@ const TrendingFeeds = () => {
   }, [tweetThreads]);
 
   const [likedTweets, setLikedTweets] = useState<string[]>([]);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+
   const [tweetThreadsState, setTweetThreadsState] =
     useState<TweetData[][]>(tweetThreads);
-
-  console.log(tweetThreadsState);
 
   const handleLikeClick = (tweetId: string) => {
     if (likedTweets.includes(tweetId)) {
@@ -64,7 +62,9 @@ const TrendingFeeds = () => {
                     </span>
                     <span className="userId">@{tweet?.user?.userId}</span>
                     <span id="dot"></span>
-                    <span className="tweet-date">Jan 20</span>
+                    <span className="tweet-date">
+                      {convertTimestampToString(tweet?.tweetTime)}
+                    </span>
                   </p>
                   <div className="reply">
                     {tweetIndex % 2 !== 0 ? (

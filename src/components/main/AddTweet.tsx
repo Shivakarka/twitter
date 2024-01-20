@@ -1,39 +1,10 @@
 import { useState } from "react";
 import { usePageContext } from "../../contexts/PageContext";
 import "./addtweet.css";
+import { TweetData } from "../../types/api";
 
 interface AddTweetProps {
-  setTweetThreadsState: React.Dispatch<
-    React.SetStateAction<
-      | {
-          id: string;
-          user: {
-            userId: string;
-            userName: string;
-            imageData: {
-              url: string;
-              alt: string;
-            };
-          };
-          textArea: string;
-          comments: {
-            id: string;
-            user: {
-              userName: string;
-              imageData: {
-                url: string;
-                alt: string;
-              };
-            };
-            comment: string;
-            replies: number;
-            reTweets: number;
-            likes: number;
-            views: number;
-          }[];
-        }[][]
-    >
-  >;
+  setTweetThreadsState: React.Dispatch<React.SetStateAction<TweetData[][]>>;
 }
 
 const AddTweet = ({ setTweetThreadsState }: AddTweetProps) => {
@@ -54,13 +25,18 @@ const AddTweet = ({ setTweetThreadsState }: AddTweetProps) => {
               url: data?.loggedInUser?.imageData?.url,
               alt: data?.loggedInUser?.imageData?.alt,
             },
+            followers: data?.loggedInUser?.followers,
+            following: data?.loggedInUser?.following,
+            desc: data?.loggedInUser?.desc,
+            blueTick: data?.loggedInUser?.blueTick,
+            joiningDate: data?.loggedInUser?.joiningDate,
           },
           textArea: tweet,
-          comments: [],
           replies: 0,
           reTweets: 0,
           likes: 0,
           views: 0,
+          tweetTime: Date.now(),
         },
       ],
       ...prevTweetThreads,
