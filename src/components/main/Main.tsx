@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { TimelineIcon } from "../../utils/svgs";
 import "./main.css";
 import TrendingFeeds from "./TrendingFeeds";
 import FollowedTimelineFeeds from "./FollowedTimelineFeeds";
+import PageHeader from "./PageHeader";
+import PageSections from "./PageSections";
 
 const Main = () => {
   const [page, setPage] = useState("forYou");
@@ -10,29 +11,8 @@ const Main = () => {
   return (
     <div className={"main"}>
       <div className="pageTitle">
-        <div className="pageTitleTop">
-          {" "}
-          <h2>Home</h2>
-          <div className="pageIcons">
-            <span>
-              <TimelineIcon />
-            </span>
-          </div>
-        </div>
-        <div className="pageTitleBottom">
-          <div className="pageSection" onClick={() => setPage("forYou")}>
-            <p>For You</p>
-            <div
-              className={`blueBottom ${page === "forYou" && "showBottom"}`}
-            ></div>
-          </div>
-          <div className="pageSection" onClick={() => setPage("following")}>
-            <p>Following</p>
-            <div
-              className={`blueBottom ${page !== "forYou" && "showBottom"}`}
-            ></div>
-          </div>
-        </div>
+        <PageHeader />
+        <PageSections page={page} setPage={setPage} />
       </div>
       {page === "forYou" ? <TrendingFeeds /> : <FollowedTimelineFeeds />}
     </div>
