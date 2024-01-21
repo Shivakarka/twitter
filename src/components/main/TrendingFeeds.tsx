@@ -3,7 +3,7 @@ import { usePageContext } from "../../contexts/PageContext";
 import AddTweet from "./AddTweet";
 import "./trendingFeeds.css";
 import { TweetData } from "../../types/api";
-import Tweet from "./Tweet";
+import TweetThreads from "./TweetThreads";
 
 const TrendingFeeds = () => {
   const data = usePageContext();
@@ -19,16 +19,7 @@ const TrendingFeeds = () => {
   return (
     <div>
       <AddTweet setTweetThreadsState={setTweetThreadsState} />
-      <div>
-        {tweetThreadsState?.map((thread, threadIndex) => (
-          <div key={threadIndex} className="threads">
-            {thread.length > 1 ? <div className="line"></div> : null}
-            {thread?.map((tweet, tweetIndex) => (
-              <Tweet tweet={tweet} tweetIndex={tweetIndex} key={tweet?.id} />
-            ))}
-          </div>
-        ))}
-      </div>
+      <TweetThreads tweetThreadsState={tweetThreadsState} />
     </div>
   );
 };
