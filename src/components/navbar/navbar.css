@@ -166,7 +166,8 @@
   }
 
   .user-info.navbar-profile p,
-  .locked {
+  .locked,
+  .more-options {
     display: none;
   }
 
