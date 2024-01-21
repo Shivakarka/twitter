@@ -56,4 +56,29 @@ const convertTimestampToString = (timestamp: number | undefined): string => {
   return `${month} ${day}`;
 };
 
-export { formatTweetCount, getUserData, convertTimestampToString };
+const newTweet = (tweet: string, data: PageResponse) => {
+  return {
+    id: Date.now().toString(),
+    user: {
+      userId: data?.loggedInUser?.userId,
+      userName: data?.loggedInUser?.userName,
+      imageData: {
+        url: data?.loggedInUser?.imageData?.url,
+        alt: data?.loggedInUser?.imageData?.alt,
+      },
+      followers: data?.loggedInUser?.followers,
+      following: data?.loggedInUser?.following,
+      desc: data?.loggedInUser?.desc,
+      blueTick: data?.loggedInUser?.blueTick,
+      joiningDate: data?.loggedInUser?.joiningDate,
+    },
+    textArea: tweet,
+    replies: 0,
+    reTweets: 0,
+    likes: 0,
+    views: 0,
+    tweetTime: Date.now(),
+  };
+};
+
+export { formatTweetCount, getUserData, convertTimestampToString, newTweet };
