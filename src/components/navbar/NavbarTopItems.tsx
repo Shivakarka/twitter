@@ -1,4 +1,5 @@
 import { usePageContext } from "../../contexts/PageContext";
+import { TweetIcon } from "../../utils/svgs";
 
 const NavbarTopItems = () => {
   const data = usePageContext();
@@ -16,7 +17,12 @@ const NavbarTopItems = () => {
         </div>
       ))}
 
-      <button id="tweet-btn">Tweet</button>
+      <button id="tweet-btn">
+        <span>Tweet</span>
+        <p>
+          <TweetIcon />
+        </p>
+      </button>
     </>
   );
 };

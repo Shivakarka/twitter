@@ -22,15 +22,21 @@ const UserProfile = ({ location, index }: UserProfileProps) => {
     <>
       <span className="user-info">
         <div
-          className={`user-info-items ${!isNavbar ? "sidebar-profile" : ""}`}
+          className={`user-info-items ${
+            !isNavbar ? "sidebar-profile" : "navbar-profile"
+          }`}
         >
           <img className="login" src={imageData?.url} alt={imageData?.alt} />
-          <div className="user-name">
+          <div
+            className={`user-name ${
+              !isNavbar ? "sidebar-username" : "navbar-username"
+            }`}
+          >
             <p id="name">{userName}</p>
             <p id="id">@{userId}</p>
           </div>
         </div>
-        <span className={`${!isNavbar ? "verified-icon" : ""}`}>
+        <span className={`${!isNavbar ? "verified-icon" : "locked"}`}>
           {isNavbar ? <LockedIcon /> : <VerifiedIcon />}
         </span>
       </span>
