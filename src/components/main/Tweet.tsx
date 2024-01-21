@@ -39,7 +39,7 @@ const Tweet = ({ tweet, tweetIndex }: TweetProps) => {
       />
       <div className="tweet-userinfo">
         <p>
-          <span>
+          <span className="user-name">
             {" "}
             {tweet?.user?.userName}
             {<VerifiedIcon />}{" "}
