@@ -2,13 +2,13 @@ import { TweetData } from "../../types/api";
 import Tweet from "./Tweet";
 
 interface TweetThreadsProps {
-  tweetThreadsState: TweetData[][];
+  tweetThreads: TweetData[][];
 }
 
-const TweetThreads = ({ tweetThreadsState }: TweetThreadsProps) => {
+const TweetThreads = ({ tweetThreads }: TweetThreadsProps) => {
   return (
     <div>
-      {tweetThreadsState?.map((thread, threadIndex) => (
+      {tweetThreads?.map((thread, threadIndex) => (
         <div key={threadIndex} className="threads">
           {thread.length > 1 ? <div className="line"></div> : null}
           {thread?.map((tweet, tweetIndex) => (

@@ -19,7 +19,7 @@ const TrendingFeeds = () => {
   return (
     <div>
       <AddTweet setTweetThreadsState={setTweetThreadsState} />
-      <TweetThreads tweetThreadsState={tweetThreadsState} />
+      <TweetThreads tweetThreads={tweetThreadsState} />
     </div>
   );
 };
