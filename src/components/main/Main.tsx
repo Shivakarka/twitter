@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./main.css";
+import "../../styles/main/Main.css";
 import TrendingFeeds from "./TrendingFeeds";
 import FollowedTimelineFeeds from "./FollowedTimelineFeeds";
 import PageHeader from "./PageHeader";

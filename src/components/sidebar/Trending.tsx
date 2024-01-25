@@ -1,6 +1,6 @@
 import { usePageContext } from "../../contexts/PageContext";
 import TrendingItem from "./TrendingItem";
-import "./trending.css";
+import "../../styles/sidebar/Trending.css";
 
 const Trending = () => {
   const data = usePageContext();

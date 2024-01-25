@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { usePageContext } from "../../contexts/PageContext";
 import AddTweet from "./AddTweet";
-import "./trendingFeeds.css";
+import "../../styles/main/TrendingFeeds.css";
 import { TweetData } from "../../types/api";
 import TweetThreads from "./TweetThreads";
 

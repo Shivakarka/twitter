@@ -1,4 +1,4 @@
-import "./navbar.css";
+import "../../styles/navbar/Navbar.css";
 import NavbarTopItems from "./NavbarTopItems";
 import NavbarBottomItems from "./NavbarBottomItems";
 

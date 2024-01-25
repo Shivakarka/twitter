@@ -1,7 +1,7 @@
 import { SearchIcon } from "../../utils/svgs";
 import FollowLists from "./FollowLists";
 import Trending from "./Trending";
-import "./sidebar.css";
+import "../../styles/sidebar/Sidebar.css";
 const Sidebar = () => {
   return (
     <div className={"sidebar"}>

@@ -1,4 +1,4 @@
-import "./App.css";
+import "./styles/App.css";
 import Navbar from "./components/navbar/Navbar.tsx";
 import Main from "./components/main/Main.tsx";
 import Sidebar from "./components/sidebar/Sidebar.tsx";

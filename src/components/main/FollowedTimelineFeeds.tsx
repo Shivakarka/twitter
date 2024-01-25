@@ -1,4 +1,4 @@
-import "./followedTimelineFeeds.css";
+import "../../styles/main/FollowedTimelineFeeds.css";
 
 const FollowedTimelineFeeds = () => {
   return (

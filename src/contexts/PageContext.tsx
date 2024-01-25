@@ -1,7 +1,7 @@
 // contexts/PageContext.js
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { PageResponse } from "../types/api";
-import "./pageContext.css";
+import "../styles/contexts/PageContext.css";
 
 const PageContext = createContext({} as PageResponse);
 

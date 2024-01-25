@@ -1,7 +1,7 @@
 import { usePageContext } from "../../contexts/PageContext";
 import { getUserData } from "../../utils/Helper";
 import { LockedIcon, VerifiedIcon } from "../../utils/svgs";
-import "./UserProfile.css";
+import "../../styles/user/UserProfile.css";
 
 interface UserProfileProps {
   location: string;
