@@ -1,6 +1,6 @@
 import { usePageContext } from "../../contexts/PageContext";
 import UserProfile from "../user/UserProfile";
-import "../../styles/sidebar/FollowList.css";
+import "../../styles/sidebar/Followlist.css";
 
 const FollowLists = () => {
   const data = usePageContext();
