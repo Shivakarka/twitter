@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { usePageContext } from "../../contexts/PageContext";
-import "../../styles/main/AddTweet.css";
+import "../../styles/main/Addtweet.css";
 import { TweetData } from "../../types/api";
 import { newTweet } from "../../utils/Helper";
 
