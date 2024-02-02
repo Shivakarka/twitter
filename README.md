@@ -1,30 +1,85 @@
-# React + TypeScript + Vite
+# Twitter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Mini Twitter page clone
 
-Currently, two official plugins are available:
+Deployed Live Link : [Click here](https://twitter-homepage-clone-sk.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Table of Contents
 
-## Expanding the ESLint configuration
+- [Introduction](#introduction)
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+- [Folder Structure](#folder-structure)
+- [Screenshots](#screenshots)
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Introduction
 
-- Configure the top-level `parserOptions` property like this:
+This project is a mini Twitter clone showcasing a tweet page. It is built using React (Typescript), utilizing state management, hooks, and responsive design practices. The project also incorporates fetching data from a provided API endpoint and supporting basic tweet functionalities such as adding a new tweet and liking a tweet.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+## Features
+
+Here are some features of this project:
+
+- Dynamic addition of tweets using React state and hooks.
+- Responsive design for both desktop and mobile devices.
+- Ability to like a tweet, incrementing the like counter.
+- Fetching network response using `fetch` and rendering data from JSON.
+
+## Getting Started
+
+Guide users on setting up the project on their local machines.
+
+### Installation
+
+Step-by-step instructions on how to install and run the project locally.
+
+```
+# Clone the repository
+git clone https://github.com/Shivakarka/twitter.git
+
+# Navigate to the project directory
+cd twitter
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
+
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Folder Structure
+
+```
+|-- public
+    | -- vite.svg
+|-- src
+    |-- assets
+    |-- components
+        |-- main
+        |-- navbar
+        |-- sidebar
+        |-- user
+    | -- contexts
+    | -- styles
+    | -- types
+    | -- utils
+    | -- App.tsx
+    | -- main.tsx
+    | -- vite-env.d.ts
+|-- .eslintrc.cjs
+|-- .gitignore
+|-- index.html
+|-- Readme.md
+|-- package-lock.json
+|-- package.json
+|-- tsconfig.json
+|-- tsconfig.node.json
+|-- vite.config.ts
+```
+
+## Screenshots
+![Screenshot 2024-02-02 175553](https://github.com/Shivakarka/twitter/assets/64298475/756e2ecb-75a0-429f-9327-0b33e489ce5b)
+![MacBook Pro-1706877750086](https://github.com/Shivakarka/twitter/assets/64298475/c9c1b17a-d994-4f82-ae3e-2e0040366c07)
+
