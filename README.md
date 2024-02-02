@@ -84,13 +84,16 @@ npm run dev
 
 ## Screenshots
 
-- Mobile view  
+- Mobile view :
+  
   ![iPhone 12 Pro-1706878093967](https://github.com/Shivakarka/twitter/assets/64298475/ac60b982-4000-4f8c-983c-c25338e8d686)
 
-- Tablet view
+- Tablet view :
+  
   ![iPad-1706878110370](https://github.com/Shivakarka/twitter/assets/64298475/a63b6095-edac-4f5c-8205-b63d07bc4b75)
 
-- Desktop view
+- Desktop view :
+  
   ![MacBook Pro-1706878132144](https://github.com/Shivakarka/twitter/assets/64298475/465eba54-d19e-403c-95cc-ac764d445ef4)
 
 
