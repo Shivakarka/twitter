@@ -53,7 +53,6 @@ npm run dev
 
 ```
 |-- public
-    | -- vite.svg
 |-- src
     |-- assets
     |-- components
@@ -63,6 +62,10 @@ npm run dev
         |-- user
     | -- contexts
     | -- styles
+        |-- main
+        |-- navbar
+        |-- sidebar
+        |-- user
     | -- types
     | -- utils
     | -- App.tsx
@@ -80,6 +83,14 @@ npm run dev
 ```
 
 ## Screenshots
-![Screenshot 2024-02-02 175553](https://github.com/Shivakarka/twitter/assets/64298475/756e2ecb-75a0-429f-9327-0b33e489ce5b)
-![MacBook Pro-1706877750086](https://github.com/Shivakarka/twitter/assets/64298475/c9c1b17a-d994-4f82-ae3e-2e0040366c07)
+
+- Mobile view  
+  ![iPhone 12 Pro-1706878093967](https://github.com/Shivakarka/twitter/assets/64298475/ac60b982-4000-4f8c-983c-c25338e8d686)
+
+- Tablet view
+  ![iPad-1706878110370](https://github.com/Shivakarka/twitter/assets/64298475/a63b6095-edac-4f5c-8205-b63d07bc4b75)
+
+- Desktop view
+  ![MacBook Pro-1706878132144](https://github.com/Shivakarka/twitter/assets/64298475/465eba54-d19e-403c-95cc-ac764d445ef4)
+
 
